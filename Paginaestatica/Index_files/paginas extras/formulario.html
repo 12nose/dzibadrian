@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Formulario 407</title>
+	<style type="text/css">
+		
+		h1 {
+			font-size: 40px;
+			font-family: abadi;
+			color:black;
+		}
+		p {
+			font-size: 30px;
+			color: black;
+		}
+		div{
+	width:600px; 
+	background:gold; 
+	margin:20px 280px; 
+	padding:15px;
+	border:4px solid #000;
+	display: inline-block;   
+
+
+}
+	</style>
+</head>
+
+<body background="D.jpg"  width="1000" height="1000">
+<h1><center>Formulario</center></h1>
+<form>
+		<><div class="Caja">
+	<p>Nombre: <input type="text" placeholder="Escribe tu nombre" required ></p>
+	<p>Sexo: Hombre <input type="radio" name="sexo" value="H" required > Mujer <input type="radio" name="Sexo" value="M" required ></p>
+	<p>Fecha: <input type="date" name="Fecha"></p>
+	<p>Hora: <input type="time" name="Hora"></p>
+    <p>Grupo: <input type="int" name="Grupo"></p>
+    <p>Carrera: <input type="text" name="Carrera"></p>
+    <p>Matricula: <input type="int" name="Matricula"></p>
+    <p>Color favorito: <input type="Color" name="Color"></p>
+    <p>Sitio Web: <input type="url" name="Web"></p>
+    <p>Fecha: <input type="email" name="Correo"></p>
+    <p>¿Cual es tu opinion?: <input type="text" name="Respuesta"></p>
+
+    <p>Pais de nacimiento: <select name="menu" size="1">
+    	<option value="0">Elija una país</option>
+    	<optgroup label="América">
+    		<option value="1">México</option>
+    		<option value="2">Colombia</option>
+    		<option value="3">Perú</option>
+    		<option value="4">Venezuela</option>
+    		<option value="5">Chile</option>
+    		<option value="6">Paraguay</option>
+    		<option value="7">Argentina</option>
+    		<option value="8">Brasil</option>
+
+    	</optgroup>
+    	<optgroup label="Europa">
+    		<option value="9">España</option>
+    		<option value="10">Francia</option>
+    		<option value="11">Italia</option>
+    		<option value="12">Grecia</option>
+    		<option value="13">Italia</option>
+    		<option value="14">Portugal</option>
+    		<option value="15">Croacia</option>
+    	</optgroup>
+    </select></p>
+    <p>Podrias darme una calificación (1-10): <input type="range" name="Calificion" min="1" max="10" step="1"></p>
+
+	<p><input type="reset" value="Borrar"></p>
+	<p><input type="submit" value="Enviar"></p>
+	</div>
+	</>
+</form>
+
+</body>
+
+</html>

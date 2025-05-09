@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct Article {
+    int code;
+    char description[100];
+    float price;
+};
+
+// Function prototypes
+void createArticle();
+void readArticles();
+void updateArticle();
+void deleteArticle();
+
+int main() {
+    int choice;
+
+    do {
+        printf("\nCRUD Operations:\n");
+        printf("1. Create Article\n");
+        printf("2. Read Articles\n");
+        printf("3. Update Article\n");
+        printf("4. Delete Article\n");
+        printf("5. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                createArticle();
+                break;
+            case 2:
+                readArticles();
+                break;
+            case 3:
+                updateArticle();
+                break;
+            case 4:
+                deleteArticle();
+                break;
+            case 5:
+                printf("Exiting...\n");
+                break;
+            default:
+                printf("Invalid choice!\n");
+        }
+    } while (choice != 5);
+
+    return 0;
+}
+
+// Function definitions (implementations)
+// ... (These functions would handle database operations, user input, and output)

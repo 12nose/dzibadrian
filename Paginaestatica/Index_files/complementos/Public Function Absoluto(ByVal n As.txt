@@ -1,0 +1,56 @@
+Public Function Absoluto(ByVal n As Integer) As Integer
+If n > 0 Then
+    Absoluto = n
+Else
+    If n < 0 Then
+        Absoluto = n * -1
+    End If
+End If
+End Function
+
+Public Function p0tenc1a(ByVal x As Integer, ByVal y As Integer) As Integer
+Dim Acu As Integer
+Dim i As Integer
+If y = 0 Then
+    p0tenc1a = 0
+Else
+Acu = x * x
+    For i = 3 To y Step 1
+        Acu = Acu * x
+    Next i
+p0tenc1a = Acu
+End If
+End Function
+
+
+Public Function Binario(ByVal num As Integer) As Integer
+Dim i As Integer
+If num = 1 Then
+    Letra = 1
+    Letra = 0
+End If
+For i = 1 To num = 0 Or 1 Step 1
+    
+Next i
+Binario = Letra
+
+
+End Function
+
+
+Public Function DecimalABinario(ByVal numeroDecimal As Long) As String
+    If numeroDecimal < 0 Then
+        DecimalABinario = "Error: Número negativo"
+    Else
+        DecimalABinario = WorksheetFunction.Dec2Bin(numeroDecimal)
+    End If
+End Function
+
+Public Function DecimalAOctal(ByVal numeroDecimal As Long) As String
+    If numeroDecimal < 0 Then
+        DecimalAOctal = "Error: Número negativo"
+    Else
+        DecimalAOctal = WorksheetFunction.Dec2Oct(numeroDecimal)
+    End If
+End Function
+
