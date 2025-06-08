@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualizar Código de Cambiador de Imagen</title>
+    <style>
+        pre {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            padding: 15px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+            line-height: 1.4;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <pre>
+&lt;SCRIPT&gt;
+&lt;!--
+        function carga_imagen(fichero_imagen)
+        {
+          document.images.imagen.src = fichero_imagen;
+        }
+//--&gt;
+&lt;/SCRIPT&gt;
+
+&lt;IMG NAME="imagen" SRC="imagenes/casa01.gif"&gt;
+&lt;FORM NAME="ejemplo6"&gt;
+      &lt;INPUT TYPE="button" NAME="boton" VALUE="Casa 1"
+          ONCLICK="carga_imagen('imagenes/casa01.gif');"&gt;
+      &lt;INPUT TYPE="button" NAME="boton" VALUE="Casa 2"
+          ONCLICK="carga_imagen('imagenes/casa02.gif');"&gt;
+      &lt;INPUT TYPE="button" NAME="boton" VALUE="Casa 3"
+          ONCLICK="carga_imagen('imagenes/casa03.gif');"&gt;
+&lt;/FORM&gt;
+    </pre>
+
+</body>
+</html>
