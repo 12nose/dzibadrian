@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualizar Código de Login</title>
+    <style>
+        pre {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            padding: 15px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+            line-height: 1.4;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Login&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Iniciar Sesión&lt;/h2&gt;
+
+&lt;?php
+$mensaje = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $usuario = $_POST["usuario"];
+    $clave = $_POST["clave"];
+
+    if ($usuario == "admin" && $clave == "1234") {
+        $mensaje = "Bienvenido, $usuario.";
+    } else {
+        $mensaje = "Usuario o contraseña incorrectos.";
+    }
+}
+?&gt;
+
+&lt;form method="post"&gt;
+    Usuario:&lt;br&gt;
+    &lt;input type="text" name="usuario"&gt;&lt;br&gt;&lt;br&gt;
+    Contraseña:&lt;br&gt;
+    &lt;input type="password" name="clave"&gt;&lt;br&gt;&lt;br&gt;
+    &lt;input type="submit" value="Entrar"&gt;
+&lt;/form&gt;
+
+&lt;p style="color:blue;"&gt;&lt;?php echo $mensaje; ?&gt;&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+
+</body>
+</html>

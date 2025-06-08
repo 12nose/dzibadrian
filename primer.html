@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Juego: Adivina el Número</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🎯 Adivina el número (1 al 10)</h1>
+<p>Escribe un número entre 1 y 10 y presiona "Probar".</p>
+
+<input type="number" id="numero" min="1" max="10" placeholder="Tu número">
+<button onclick="adivinar()">Probar</button>
+
+<div id="resultado"></div>
+
+<script>
+  const numeroSecreto = Math.floor(Math.random() * 10) + 1;
+  let intentos = 3;
+
+  function adivinar() {
+    const entrada = parseInt(document.getElementById("numero").value);
+    const resultado = document.getElementById("resultado");
+
+    if (isNaN(entrada) || entrada < 1 || entrada > 10) {
+      resultado.textContent = "⚠️ Ingresa un número válido del 1 al 10.";
+      resultado.style.color = "orange";
+      return;
+    }
+
+    if (entrada === numeroSecreto) {
+      resultado.textContent = "🎉 ¡Correcto! Adivinaste el número.";
+      resultado.style.color = "green";
+      document.querySelector("button").disabled = true;
+    } else {
+      intentos--;
+      if (intentos > 0) {
+        resultado.textContent = `❌ Incorrecto. Te quedan ${intentos} intento(s).`;
+        resultado.style.color = "red";
+      } else {
+        resultado.textContent = `💀 Has perdido. El número era ${numeroSecreto}.`;
+        resultado.style.color = "black";
+        document.querySelector("button").disabled = true;
+      }
+    }
+  }
+</script>
+
+</body>
+</html>
